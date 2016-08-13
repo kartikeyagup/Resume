@@ -15,7 +15,7 @@
 \usepackage{setspace}
 \usepackage{url}
 \usepackage{sectsty}
-\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[letterpaper,margin=0.6in]{geometry}
 \pagestyle{empty}
 
 \newenvironment{indentsection}[1]%
@@ -56,11 +56,8 @@
 \setstretch{1.10}
 
 
-% and the actual content starts here
 \begin{document}
 
-%TITLE
-%todo change the email address and website address to your new address.
 \begin{center}
  {\large \textsc{Kartikeya Gupta} }\\ 
 \begin{tabular}{ l p{4cm} r }
@@ -77,12 +74,10 @@
 \hline
 Year & Degree & Institute & CGPA/Percentage \\ 
 \hline
-2013-2017 & B.Tech in Computer Science & Indian Institute of Technology & 9.77/10 \\ 
-(Expected) & and Engineering & Delhi & \textbf{Institute Rank 1} \\ \hline
-
-
+2013-2017 & B.Tech in Computer Science & Indian Institute of Technology & 9.67/10 \\ 
+(Expected) & and Engineering & Delhi & \textbf{Institute Rank 1} \\ 
+\hline
 2013 & Class XII, CBSE & Upras Vidyalaya, New Delhi & 93\% \\ 
-
 \hline
 2011 & Class X, CBSE & Delhi Public School R.K. Puram,  New Delhi & 10/10 \\  \hline
 \end{tabular}
@@ -90,25 +85,32 @@ Year & Degree & Institute & CGPA/Percentage \\
 
 \section{Scholastic Achievements}
 \begin{itemize}
-\setlength\itemsep{0em}
-\item \textbf{Institute Rank 1}  Consistently maintaining institute rank 1 among 850 students during academic years 2013-2015 at IIT Delhi. IIT Delhi granted scholarship for the same.  
-    \item \textbf{All India Rank 4} in Indian Institute Of Technology Joint Entrance Examination (JEE Advanced-2013).
-    
-    \item One of the 16 students selected nationwide for the \textbf{Aditya Birla Group Scholarship}, 2013 out of the students from different IITs.
-    \item Certificate of Merit awarded by Homi Bhabha Center for Science Education for being in \textbf{Top 30} at:
-        \begin{itemize}
     \setlength\itemsep{0em}
-        \item Indian National Chemistry Olympiad 2013 (\textbf{INChO}) 
-        \item Indian National Astronomy Olympiad 2012 (\textbf{INAO}).
-        \end{itemize}
-    \item \textbf{NTSE Scholar:} Selected as a National Talent Search Examination Scholar - 2009 for being in top 1000 at National Level.
+    \item \textbf{Institute Rank 1}  Consistently maintaining institute rank 1 among 850 students during academic years 2013-2016 at IIT Delhi. IIT Delhi granted scholarship for the same.  
+    \item \textbf{All India Rank 4} in Indian Institute Of Technology Joint Entrance Examination (JEE Advanced-2013).
+
+    \item One of the 16 students selected nationwide for the \textbf{Aditya Birla Group Scholarship}, 2013 out of the students from different IITs.
+    \item Selected as a National Talent Search Examination\textbf{ (NTSE)}  Scholar-2009 for being in National top 1000.
 \end{itemize}
 
-
-
-\section{Major Projects}
+\section{Internships and Major Projects}
 \begin{list} {\labelitemi}{\leftmargin=0em}
 \setlength{\leftmargin}{0pt}
+\item[]
+  \headerrow
+    {\textbf{Tango - Factory Calibration}}
+    {Google, Mountain View, USA}
+  \\
+  \headerrow
+    {\emph{Summer Internship}}
+    {\emph{May - August, 2015}}
+      \begin{itemize}
+        \item Developed a tool to visualize statistics and flag outliers on multiple calibration datasets. 
+        \item Collected more than 2000 datasets on tango devices to obtain insights and find bugs in the calibration pipeline.
+        \item Developed a script to control the entire calibration sequence for a device including robot motion, device capture and data processing. Presently being used at the factory line.
+        \item Incorporated G-Sensitivity in the IMU Model for Tango to improve calibration and motion estimates. Performed multiple experiments to validate improvements in overall results of position and orientation estimates.
+      \end{itemize}
+
 \item[]
   \headerrow
     {\textbf{3D Reconstruction on Mobile Device}}
@@ -116,34 +118,31 @@ Year & Degree & Institute & CGPA/Percentage \\
   \\
   \headerrow
     {\emph{Summer Undergraduate Research Project}}
-    {\emph{January, 2015 - Present}}
+    {\emph{January - November, 2015}}
       \begin{itemize}
-        \item Building a mobile app for near real time 3D reconstruction of monuments/objects.
+        \item Developed a mobile app for near real time 3D reconstruction of monuments/objects.
         \item Uses accelerometer, gyroscope, magnetometer (IMU sensors) data for rotation and translation matrix estimation. 
-        \item Using a Kalman filter, dense and sparse optical flow to improve the extrinsic camera parameters. 
+        \item Uses a Kalman filter, dense and sparse optical flow to improve the extrinsic camera parameters. 
         \item Designed a 2-point algorithm to reduce computational complexity. 
-        \item The challenge is to complete dense 3D reconstruction in near real time on mobile devices.
+        \item The challenge was to complete dense 3D reconstruction in near real time on mobile devices.
       \end{itemize}
 
 \item[]
-  \item[]
   \headerrow
   {\textbf{Real Time Position Estimation on Mobile Devices}}
   {Prof. Subhashis Banerjee}
   \\
   \headerrow
     {\emph{Independent Project}}
-    {\emph{January, 2015 - May, 2015}}
+    {\emph{January - May, 2015}}
 
     \begin{itemize}
       \item Developed an Android app to calculate displacement and orientation accurately from accelerometer, gyroscope, magnetometer (IMU sensors).
-
       \item Applied sensor fusions algorithms to remove static bias and noise.
       \item Increased robustness and accuracy using local regression and visual tracking of points.
       \item Created a novel technique to separate regions of motion and rest for enhanced accuracy.
       \item Optimized algorithm to run in real time.
     \end{itemize}
-
 
 \end{list}
 
@@ -156,14 +155,26 @@ Year & Degree & Institute & CGPA/Percentage \\
 \setlength{\leftmargin}{0pt}
 
 \item[]
-  \headerrow {\textbf{Network Based Multiplayer Game}} {Prof. Huzur Saran, March, 2015- April, 2015}
+  \headerrow {\textbf{IIT Delhi Wifi Log Management System}} {Prof. Huzur Saran, December, 2015 - May, 2016}
   \begin{itemize} \item[]
-  Designed a multi-player p2p network based game of space invaders where one has to shoot down aliens in the given set of lives using OpenGL for graphics and UDP sockets as network component. To maintain seamless continuity of the game during network outages, a player losing connection is replaced by an Artificial Intelligence bot. 
+  Developed a system to process logs from all wifi routers on campus and generate alerts for suspicious user login. Presently being used to detect wifi misuse and generate statistics to improve the overall campus network.
+  \end{itemize}
+
+\item[]
+  \headerrow {\textbf{Automated Theorem Prover}} {Prof. S. Arun Kumar, October - November, 2015}
+  \begin{itemize} \item[]
+  Devised and Implemented a theorem prover based on Analytical Tableaux in SML. Proved invalidity of a First-order logic formula by successively applying tableaux rules thus finding contradictions and closing branches.Tested the prover with several tautologies.
+  \end{itemize}
+
+\item[]
+  \headerrow {\textbf{Network Based Multiplayer Game}} {Prof. Huzur Saran, March - April, 2015}
+  \begin{itemize} \item[]
+  Designed a multi-player p2p network based game of space invaders where one has to shoot down aliens in a given set of lives using OpenGL for graphics and UDP sockets as network component. To maintain seamless continuity of the game during network outages, a player losing connection is replaced by an Artificial Intelligence bot. 
   \end{itemize}
 
 
 \item[]
-  \headerrow{ \textbf{RISC Processor Implementation}} {Prof. Smruti Sarangi, April, 2015 - May, 2015}
+  \headerrow{ \textbf{RISC Processor Implementation}} {Prof. Smruti Sarangi, April - May, 2015}
   \begin{itemize} \item[]
   Designed a RISC processor with RAM, Register File, ALU and Control in Logisim and ran successful simulations of the design. It involved pipelining and forwarding between different stages.
   \end{itemize}
@@ -174,14 +185,7 @@ Year & Degree & Institute & CGPA/Percentage \\
   Created a cloud storage system in C++ allowing users to sync files with the server and share files with each other. Used FTP and TCP-IP for sync and transfer. Implemented data de-duplication to minimise server disk usage. OpenSSL was used to ensure encrypted file transfer.
   \end{itemize}
 
-\item[]
-  \headerrow{ \textbf{Prolog Interpreter}} {Prof. Sanjiva Prasad, March 2015}
-  \begin{itemize} \item[]
-  Designed and implemented a Prolog interpreter in SML. Implemented Lexer and Parser using ML-Lex and ML-Yacc to generate an Abstract Syntax Tree.
-  \end{itemize}
-
 \end{list}
-
 \end{longversion}
 
 \begin{longversion}
@@ -189,19 +193,18 @@ Year & Degree & Institute & CGPA/Percentage \\
 \begin{itemize}
 \setlength\itemsep{-1em}
 \item \textbf{Computer Science:} \\
-Data Structures and Algorithms, Discrete Mathematical Structures, Digital Logic and Design, Programming Languages, Computer Architecture, Design Practices in Computer Science, Logic for Computer Science*, Computer Networks*, Artificial Intelligence*, Analysis and Design of Algorithms*  \\
+Data Structures \& Algorithms, Discrete Mathematical Structures, Digital Logic Design, Programming Languages, Computer Architecture, Design Practices in Computer Science, Logic for Computer Science, Computer Networks, Artificial Intelligence, Analysis \& Design of Algorithms, Theory of Computation, Numerical Algorithms, Parallel Programming, Operating Systems, Algorithmic Game Theory  \\
 
 \item \textbf{Mathematics and Electrical Engineering:} \\
-Calculus, Linear Algebra and Differential Equations, Introduction to Electrical Engineering,  Probability and Stochastic Processes, Signals and Systems
+Calculus, Linear Algebra, Intro to Electrical Engineering, Probability \& Stochastic Processes, Signals \& Systems
 \end{itemize}
-\textit{*Courses Currently pursuing}
 \end{longversion}
 
 
 \begin{longversion}
 \section{Technical Skills}
 \begin{itemize}
-\item \textbf{Programming Languages:} C, C\#, C++, Objective-C, Swift, Java, Python, SML, OCaml, Lex, Yacc, Prolog, VHDL, MySQL, JavaScript 
+\item \textbf{Programming Languages:} C, C\#, C++, Java, Python, SML, OCaml, Lex, Yacc, Prolog, VHDL, MySQL, HTML, PHP, JavaScript 
 
 \end{itemize}
 \end{longversion}
@@ -210,6 +213,7 @@ Calculus, Linear Algebra and Differential Equations, Introduction to Electrical 
 
 \begin{itemize}
     \setlength\itemsep{0em}
+    \item Elected as the Computer Science class representative 2016 - 2017.
     \item Runner up in Code.Fun.Do - 2015 organised by Microsoft amongst students from different colleges from India.
     \item Pursued an internship to work in the emergency child line service at Synergy Sansthan, an NGO in rural Madhya Pradesh in December 2013. It involved rescuing children in distress and providing them shelter, counseling and proper care.
     \item Junior diploma in Indian Classical Music - Tabla from Prayag Sangeet Samiti, Allahabad. 
