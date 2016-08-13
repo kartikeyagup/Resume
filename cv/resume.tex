@@ -1,0 +1,266 @@
+\documentclass{article}
+
+\usepackage{verbatim}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=black,      % color of file links
+  }
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+\newenvironment{longversion}{}{} % use this to show longversion
+%\newenvironment{longversion}{\comment}{\endcomment} % use this to hide  longversion
+\newenvironment{shortversion}{}{} % use this to show shortversion
+%\newenvironment{shortversion}{\comment}{\endcomment} % use this to hide shortversion
+
+\usepackage{changepage}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{url}
+\usepackage{sectsty}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\pagestyle{empty}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+%edit the section font and style
+\sectionfont{\normalfont\sectionrule{0pt}{0pt}{-4pt}{1pt}}
+
+%make all sections cap and first letter capital
+\newcommand{\tmpsection}[1]{}
+\let\tmpsection=\section
+\renewcommand{\section}[1]{\tmpsection*{\textsc{#1}}}
+
+%set the line spacing
+\setstretch{1.10}
+
+
+% and the actual content starts here
+\begin{document}
+
+%TITLE
+%todo change the email address and website address to your new address.
+\begin{center}
+ {\large \textsc{Kartikeya Gupta} }\\ 
+\begin{tabular}{ l p{4cm} r }
+    & &   \\
+  Computer Science and Engineering & & kartikeyagupta1995@gmail.com \\
+  Indian Institute of Technology, Delhi & & \href{http://www.cse.iitd.ac.in/~cs1130231/}{www.cse.iitd.ac.in/$\sim$cs1130231/} \\
+\end{tabular}
+\end{center}
+
+
+\section{Academic Details}
+\begin{center}
+\begin{tabular}{ |c | c | c | c |}
+\hline
+Year & Degree & Institute & CGPA/Percentage \\ 
+\hline
+2013-2017 & B.Tech in Computer Science & Indian Institute of Technology & 9.77/10 \\ 
+(Expected) & and Engineering & Delhi & \textbf{Institute Rank 1} \\ \hline
+
+
+2013 & Class XII, CBSE & Upras Vidyalaya, New Delhi & 93\% \\ 
+
+\hline
+2011 & Class X, CBSE & Delhi Public School R.K. Puram,  New Delhi & 10/10 \\  \hline
+\end{tabular}
+\end{center}
+
+\section{Scholastic Achievements}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item \textbf{Institute Rank 1}  Consistently maintaining institute rank 1 among 850 students during academic years 2013-2015 at IIT Delhi. IIT Delhi granted scholarship for the same.  
+    \item \textbf{All India Rank 4} in Indian Institute Of Technology Joint Entrance Examination (JEE Advanced-2013).
+    
+    \item One of the 16 students selected nationwide for the \textbf{Aditya Birla Group Scholarship}, 2013 out of the students from different IITs.
+    % Awarded the Aditya Birla Group Scholarship, 2013 after competing with students from different IITs.
+    % \item Certificate Of Merit awarded by IIT Delhi for being in 
+% Institute Top 7\% among all students in the last 3 semesters(2013-2015).
+    % \item All India Rank 738 out of 1.4 million candidates appearing in Joint Entrance Examination(JEE Mains-2013) organized by Central Board Of Secondary Education(CBSE).
+    \item Certificate of Merit awarded by Homi Bhabha Center for Science Education for being in \textbf{Top 30} at:
+        \begin{itemize}
+
+    \setlength\itemsep{0em}
+        \item Indian National Chemistry Olympiad 2013 (\textbf{INChO}) 
+        \item Indian National Astronomy Olympiad 2012 (\textbf{INAO}).
+        \end{itemize}
+    % \item Selected as a \textbf{KVPY} Scholar under `Kishore Vaigyanik Protsahan Yojana' administered by Indian Institute of Science in 2012-2013.
+    % \item Got a perfect score in Mathematics in All India Senior School Certificate Examination(2014) organized by CBSE in XII grade.
+    % \item Certificate Of Merit awarded by Indian Association Of Physics Teachers for being in National Top 1\% at National Standard Examination in Physics (\textbf{NSEP}) 2013.
+    \item \textbf{NTSE Scholar:} Selected as a National Talent Search Examination Scholar - 2009 for being in top 1000 at National Level.
+\end{itemize}
+
+
+
+\section{Major Projects}
+% \begin{spacing}{1}
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+\item[]
+  \headerrow
+    {\textbf{3D Reconstruction on Mobile Device}}
+    {Prof. Subhashis Banerjee}
+  \\
+  \headerrow
+    {\emph{Summer Undergraduate Research Project}}
+    {\emph{January, 2015 - Present}}
+      \begin{itemize}
+        \item Building a mobile app for near real time 3D reconstruction of monuments/objects.
+        \item Uses accelerometer, gyroscope, magnetometer (IMU sensors) data for rotation and translation matrix estimation. 
+        \item Using a Kalman filter, dense and sparse optical flow to improve the extrinsic camera parameters. 
+        \item Designed a 2-point algorithm to reduce computational complexity. 
+        \item The challenge is to complete dense 3D reconstruction in near real time on mobile devices.
+        % \item The entire process of dense 3D reconstruction will be done entirely on the mobile device in near real time. 
+
+        % \item Designed an oracle that answers reachability questions on programs:
+        %   \begin{itemize}
+        %     \item How can an execution reach a given program location and satisfy a given memory constraint?
+        %     \item Given a bug report, find an execution that matches the failing stack trace (from the bug report)?
+        %   \end{itemize}
+        % \item Incorporated useful data from Bug reports into Static Analysis to provide more meaningful error traces %to the developer.
+        % \item Instrumented program to fail only when the condition in query holds and used Corral to find ``failing'' paths.
+        % \item Provided functionality of ``time travel'' debugging by analyzing dumps of underlying theorem prover.
+        % \item Improved SMT-solver runtime by 30\% by augmenting function properties with invariants maintained during instrumentation, thereby ``guiding'' the analysis in the direction of the failure.
+        %\item Conceptualized and implemented an interactive command line interface, thus building a static analysis domain debugger. 
+      \end{itemize}
+      %designing an oracle that answers reachability questions on programs.
+       %Reused existing verification technology to create a query engine that can automatically answer certain reachability questions: 
+      %Devised a new framework and process using an SMT-based static analysis tool.
+       %Interfaced Trace Analyzer with IronPython to provide a fast and expressive scripting language.
+       %Tested Trace Analyzer on a collection of 350 Windows device drivers.
+
+
+\item[]
+  \item[]
+  \headerrow
+  {\textbf{Real Time Position Estimation on Mobile Devices}}
+  {Prof. Subhashis Banerjee}
+  \\
+  \headerrow
+    {\emph{Independent Project}}
+    {\emph{January, 2015 - May, 2015}}
+
+    \begin{itemize}
+      \item Developed an Android app to calculate displacement and orientation accurately from accelerometer, gyroscope, magnetometer (IMU sensors).
+
+      \item Applied sensor fusions algorithms to remove static bias and noise.
+      \item Increased robustness and accuracy using local regression and visual tracking of points.
+      \item Created a novel technique to separate regions of motion and rest for enhanced accuracy.
+      \item Optimized algorithm to run in real time.
+    \end{itemize}
+
+
+\end{list}
+% \end{spacing}
+
+
+
+
+\begin{longversion}
+% \pagebreak
+\end{longversion}
+
+\begin{longversion}
+\section{Other Projects}
+\begin{list} {\labelitemi}{\leftmargin=0em}
+\setlength{\leftmargin}{0pt}
+%\begin{itemize}
+
+
+\item[]
+  \headerrow {\textbf{Network Based Multiplayer Game}} {Prof. Huzur Saran, March, 2015- April, 2015}
+  \begin{itemize} \item[]
+  Designed a multi-player p2p network based game of space invaders where one has to shoot down aliens in the given set of lives using OpenGL for graphics and UDP sockets as network component. To maintain seamless continuity of the game during network outages, a player losing connection is replaced by an Artificial Intelligence bot. 
+  \end{itemize}
+
+
+\item[]
+  \headerrow{ \textbf{RISC Processor Implementation}} {Prof. Smruti Sarangi, April, 2015 - May, 2015}
+  \begin{itemize} \item[]
+  Designed a RISC processor with RAM, Register File, ALU and Control in Logisim and ran successful simulations of the design. It involved pipelining and forwarding between different stages.
+  \end{itemize}
+
+\item[]
+  \headerrow{ \textbf{Cloud Storage System}} {Prof. Huzur Saran, February 2015}
+  \begin{itemize} \item[]
+  Created a cloud storage system in C++ allowing users to sync files with the server and share files with each other. Used FTP and TCP-IP for sync and transfer. Implemented data de-duplication to minimise server disk usage. OpenSSL was used to ensure encrypted file transfer.
+  \end{itemize}
+
+\item[]
+  \headerrow{ \textbf{Prolog Interpreter}} {Prof. Sanjiva Prasad, March 2015}
+  \begin{itemize} \item[]
+  Designed and implemented a Prolog interpreter in SML. Implemented Lexer and Parser using ML-Lex and ML-Yacc to generate an Abstract Syntax Tree.
+  \end{itemize}
+
+\end{list}
+%\end{itemize}
+
+% \pagebreak
+\end{longversion}
+
+\begin{longversion}
+\section{Relevant Courses}
+\begin{itemize}
+\setlength\itemsep{-1em}
+\item \textbf{Computer Science:} \\
+Data Structures and Algorithms, Discrete Mathematical Structures, Digital Logic and Design, Programming Languages, Computer Architecture, Design Practices in Computer Science, Logic for Computer Science*, Computer Networks*, Artificial Intelligence*, Analysis and Design of Algorithms*  \\
+%\textbf{Leave a line here}  \\
+
+\item \textbf{Mathematics and Electrical Engineering:} \\
+Calculus, Linear Algebra and Differential Equations, Introduction to Electrical Engineering,  Probability and Stochastic Processes, Signals and Systems
+\end{itemize}
+\textit{*Courses Currently pursuing}
+\end{longversion}
+
+
+\begin{longversion}
+\section{Technical Skills}
+\begin{itemize}
+\item \textbf{Programming Languages:} C, C\#, C++, Objective-C, Swift, Java, Python, SML, OCaml, Lex, Yacc, Prolog, VHDL, MySQL, JavaScript 
+
+\end{itemize}
+\end{longversion}
+
+\section{Extra Curricular Activities}
+%\setlength{\leftmargin}{0pt}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item Runner up in Code.Fun.Do - 2015 organised by Microsoft amongst students from different colleges from India.
+    \item Pursued an internship to work in the emergency child line service at Synergy Sansthan, an NGO in rural Madhya Pradesh in December 2013. It involved rescuing children in distress and providing them shelter, counseling and proper care.
+    \item Junior diploma in Indian Classical Music - Tabla from Prayag Sangeet Samiti, Allahabad. 
+\end{itemize}
+
+%\headerrow{Contributed  more than 100 hours of social service as an NSS volunteer. } {\emph{2009}}
+
+
+
+\end{document}
